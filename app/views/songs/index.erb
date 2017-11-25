@@ -1,0 +1,8 @@
+<h1>Songs</h1>
+<% @songs.each do |x| %>
+  <h3><a href="/songs/<%=x.slug%>"><%=x.name%></a></h3>
+  <ul>
+    <li>Artist: <%=x.artist.name%></li>
+    <li>Genres: <%=x.genres.collect{|y|y.name}.to_sentence%></li>
+  </ul>
+<% end %>
